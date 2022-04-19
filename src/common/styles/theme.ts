@@ -21,8 +21,8 @@ export const primaryColors = {
 } as const
 
 export const secondaryColors = {
-  yellow: '#FFCC33',
-  green: '#63BA68',
+  purple: '#6B5995',
+  green: '#60A12D',
 } as const
 
 export const font = {
@@ -31,6 +31,7 @@ export const font = {
   semiBold: 600,
   bold: 700,
   sizes: {
+    xxSmall: '0.938rem',
     xSmall: '1.2rem',
     small: '1.4rem',
     normal: '1.6rem',
@@ -43,6 +44,7 @@ export const font = {
     heading01: '4.2rem',
   },
   lineHeight: {
+    xxxsmall: '1.4',
     xxsmall: '1.6',
     xsmall: '1.8rem',
     small: '2.1rem',
@@ -56,7 +58,7 @@ export const font = {
     heading01: '5rem',
   },
   family: {
-    Roboto: "'roboto', arial, sans-serif",
+    Roboto: "Poppins, 'roboto', arial, sans-serif",
   },
 } as const
 
