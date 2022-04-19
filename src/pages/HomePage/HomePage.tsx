@@ -13,9 +13,10 @@ export const HomePage: FC = () => {
         imageSrc={comicsBanner}
         bannerText='Huia - Teste Desenvolvimento Front-End'
       ></Banner>
-      <Button >
-        <p>ADICIONAR AO CARRINHO</p>
-      </Button>
+      <Button 
+        buttonText='ADICIONAR AO CARRINHO'
+        buttonColor='green'
+      />
     </S.Container>
   )
 }

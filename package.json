@@ -37,7 +37,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage --colors --watchAll false",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -60,5 +60,32 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.25"
+  },
+  "jest": {
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "clover",
+      "html"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{tsx,jsx}",
+      "!src/**/*.stories.{tsx,jsx,ts}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "\\.d\\.ts$",
+      "/src/routes/",
+      "/src/common/utils/",
+      "/src/index.tsx"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
   }
 }

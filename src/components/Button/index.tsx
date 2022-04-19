@@ -1,16 +1,23 @@
 // Libs
 import React, { ButtonHTMLAttributes } from 'react';
 // Self
-import { Container } from './styles';
+import { ButtonContainer } from './styles';
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  buttonColor: 'green' | 'purple';
+  buttonText?: string;
+  textColor?: string;
+};
 
 const Button: React.FC<ButtonProps> = ({
-  children
+  buttonColor,
+  buttonText
 }) => (
-  <Container>
-    {children}
-  </Container>
+  <ButtonContainer 
+    buttonColor={buttonColor}
+  >
+    <p>{buttonText}</p>
+  </ButtonContainer>
 );
 
 export default Button;
