@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 // Self
 import * as S from './styles';
 // Assets
-import  starEmpty from '../../common/assets/icons/star-empty.svg'
-import  starfilled from '../../common/assets/icons/star-filled.svg'
+import  starEmpty from '../../common/assets/icons/star-empty-icon.svg'
+import  starfilled from '../../common/assets/icons/star-filled-icon.svg'
 
 const RatingStars: React.FC = () => {
   const [rating, setRating] = useState(0);

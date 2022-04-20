@@ -5,7 +5,7 @@ import * as S from './styles'
 import Button from '../../components/Button'
 import Banner from '../../components/Banner'
 // Assets
-import comicsBanner from '../../common/assets/images/comics-banner.svg';
+import comicsBanner from '../../common/assets/images/full/comics-banner-image.svg';
 import RatingStars from '../../components/RatingStars';
 
 export const HomePage: FC = () => {
