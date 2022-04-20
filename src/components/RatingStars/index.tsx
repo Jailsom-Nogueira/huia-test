@@ -1,17 +1,20 @@
 // Libs
 import React, { useState } from 'react';
 // Self
-import { Container, ButtonStar } from './styles';
+import * as S from './styles';
+// Assets
+import  starEmpty from '../../common/assets/icons/star-empty.svg'
+import  starfilled from '../../common/assets/icons/star-filled.svg'
 
 const RatingStars: React.FC = () => {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
   return (
-    <Container>
+    <S.Container>
       {[...Array(5)].map((_star, index) => {
         index += 1;
         return (
-          <ButtonStar
+          <S.ButtonStar
             data-testid={'rating-stars-' + index}
             type="button"
             key={index}
@@ -21,14 +24,20 @@ const RatingStars: React.FC = () => {
             onMouseLeave={() => setHover(rating)}
           >
             {
-              index <= (hover || rating) ? 
-              <span>&#9733;</span> : 
-              <span>&#9734;</span>
+              index <= (hover || rating) ?
+              <img
+                src={starfilled}
+                alt={'Star filled icon'}
+              /> : 
+              <img
+                src={starEmpty}
+                alt={'Star empty icon'}
+              />
             }   
-          </ButtonStar>
+          </S.ButtonStar>
         );
       })}
-    </Container>
+    </S.Container>
   )
 };
 

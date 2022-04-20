@@ -4,6 +4,7 @@ import { FC } from 'react'
 import * as S from './styles'
 import Button from '../../components/Button'
 import Banner from '../../components/Banner'
+// Assets
 import comicsBanner from '../../common/assets/images/comics-banner.svg';
 import RatingStars from '../../components/RatingStars';
 
