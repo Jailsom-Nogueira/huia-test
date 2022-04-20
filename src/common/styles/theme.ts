@@ -17,12 +17,14 @@ export const spacings = {
 
 export const primaryColors = {
   white: '#FFF',
-  black: '#000',
+  dark: '#000',
 } as const
 
 export const secondaryColors = {
   purple: '#6B5995',
   green: '#60A12D',
+  gray: '#6B6B6B',
+  grayDark: '#2F2F2F'
 } as const
 
 export const font = {
@@ -30,6 +32,7 @@ export const font = {
   normal: 400,
   semiBold: 600,
   bold: 700,
+  xbold: 800,
   sizes: {
     xxSmall: '0.938rem',
     xSmall: '1.2rem',

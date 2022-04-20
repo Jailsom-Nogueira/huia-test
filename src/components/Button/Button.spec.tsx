@@ -1,7 +1,7 @@
 // Libs
 import { render } from '@testing-library/react';
 // Self
-import Button from '.';
+import { Button } from './Button';
 
 describe('Button element', () => {
   test('Button renders', () => {

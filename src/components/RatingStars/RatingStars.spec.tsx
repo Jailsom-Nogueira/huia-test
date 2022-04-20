@@ -2,7 +2,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event'
 // Self
-import RatingStars from '.';
+import { RatingStars } from './RatingStars';
 
 describe('RatingStars element', () => {
   test('RatingStars renders', () => {

@@ -1,12 +1,12 @@
 // Libs
-import React, { useState } from 'react';
+import { FC, useState } from 'react';
 // Self
 import * as S from './styles';
 // Assets
-import  starEmpty from '../../common/assets/icons/star-empty-icon.svg'
-import  starfilled from '../../common/assets/icons/star-filled-icon.svg'
+import starEmpty from '../../common/assets/icons/star-empty-icon.svg'
+import starfilled from '../../common/assets/icons/star-filled-icon.svg'
 
-const RatingStars: React.FC = () => {
+export const RatingStars: FC = () => {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
   return (
@@ -40,5 +40,3 @@ const RatingStars: React.FC = () => {
     </S.Container>
   )
 };
-
-export default RatingStars;

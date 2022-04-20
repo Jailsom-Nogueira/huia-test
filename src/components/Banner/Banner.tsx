@@ -1,14 +1,14 @@
 // Libs
-import React from 'react';
+import { FC } from 'react';
 // Self
 import { Container } from './styles';
 
 interface BannerProps {
   imageSrc: string;
-  bannerText: string;
+  bannerText?: string;
 }
 
-const Banner: React.FC<BannerProps> = ({
+export const Banner: FC<BannerProps> = ({
   bannerText, 
   imageSrc
 }) => {
@@ -18,5 +18,3 @@ const Banner: React.FC<BannerProps> = ({
     </Container>
   );
 };
-
-export default Banner;

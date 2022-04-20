@@ -1,5 +1,5 @@
 // Libs
-import React, { ButtonHTMLAttributes } from 'react';
+import { FC, ButtonHTMLAttributes } from 'react';
 // Self
 import { ButtonContainer } from './styles';
 
@@ -9,7 +9,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   textColor?: string;
 };
 
-const Button: React.FC<ButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
   buttonColor,
   buttonText
 }) => (
@@ -19,5 +19,3 @@ const Button: React.FC<ButtonProps> = ({
     <p>{buttonText}</p>
   </ButtonContainer>
 );
-
-export default Button;

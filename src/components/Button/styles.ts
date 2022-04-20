@@ -19,7 +19,7 @@ export const ButtonContainer = styled.button<ButtonProps>`
   height: 52px;
   border: none;
 
-  font-size: ${font.sizes.xxSmall};
+  font-size: ${font.sizes.xSmall};
   font-weight: ${font.semiBold};
   color: ${primaryColors.white};
 

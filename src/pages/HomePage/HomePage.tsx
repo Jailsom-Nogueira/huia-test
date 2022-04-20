@@ -2,15 +2,23 @@
 import { FC } from 'react'
 // Self
 import * as S from './styles'
-import Button from '../../components/Button'
-import Banner from '../../components/Banner'
+import { 
+  Banner, 
+  Button, 
+  RatingStars 
+} from '../../components'
 // Assets
 import comicsBanner from '../../common/assets/images/full/comics-banner-image.svg';
-import RatingStars from '../../components/RatingStars';
+import { ProductCard } from '../../containers';
 
 export const HomePage: FC = () => {
   return (
     <S.Container>
+      <ProductCard 
+        productTitle= 'titulo'
+        productDescription= 'descr'
+        productPrice= {204}
+      />
       <Banner 
         imageSrc={comicsBanner}
         bannerText='Huia - Teste Desenvolvimento Front-End'
