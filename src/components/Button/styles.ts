@@ -24,7 +24,7 @@ export const ButtonContainer = styled.button<ButtonProps>`
   color: ${primaryColors.white};
 
   background-color: ${props => 
-    props.buttonColor == 'green' ? 
+    props.buttonColor === 'green' ? 
     secondaryColors.green : 
     secondaryColors.purple
   };
