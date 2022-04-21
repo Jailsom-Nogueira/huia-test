@@ -1,27 +1,19 @@
 // Libs
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import { Button, RatingStars } from '../../components';
 // Self
 import * as S from './styles';
+import { ProductProps } from '../../common/interfaces/IProducts';
+import { CartHook } from '../../hooks/CartHook/CartHook'
 // Assets
 import robotImage from '../../common/assets/images/full/robot-image.svg';
-
-interface ProductCardProps {
-  productDescription: string;
-  productTitle: string;
-  productPrice: number;
-  productId: string;
-};
-
-interface ProductProps {
-  product: ProductCardProps 
-};
 
 export const ProductCard: FC<ProductProps> = ({
   product
 }) => {
-  const [shopCart, setShopCart] = useState<any>([]);
-  // console.log(shopCart)
+  const {
+    addProduct
+  } = CartHook()
   return (
     <>
       <img src={robotImage} alt={`Product ${product.productTitle}`}/>
@@ -44,7 +36,9 @@ export const ProductCard: FC<ProductProps> = ({
       <Button 
         buttonText='ADICIONAR AO CARRINHO'
         buttonColor='green'
-        onClick={() => setShopCart([...shopCart, product])}
+        onClick={() => 
+          addProduct && 
+          addProduct(product)}
       />
     </>
   )

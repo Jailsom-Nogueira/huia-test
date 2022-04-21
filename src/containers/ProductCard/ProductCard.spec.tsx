@@ -6,7 +6,6 @@ import { ProductCard } from './ProductCard';
 // Mocks
 import { product } from '../../common/mocks';
 
-
 describe('ProductCard element', () => {
   test('ProductCard element renders', () => {
     render(<ProductCard product={product} />);

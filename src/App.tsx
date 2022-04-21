@@ -1,17 +1,19 @@
+// Libs
 import { BrowserRouter } from 'react-router-dom'
-
-import GlobalStyles from './common/styles/global'
+// Self
 import { Routes } from './routes'
+import GlobalStyles from './common/styles/global'
+import { ShopCartHook } from './context/ShopCartContext/ShopCartContext'
 
 function App() {
   return (
-    <>
+    <ShopCartHook >
       <BrowserRouter>
         <Routes />
       </BrowserRouter>
 
       <GlobalStyles />
-    </>
+    </ShopCartHook>
   );
 }
 
