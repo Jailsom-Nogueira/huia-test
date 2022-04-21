@@ -8,6 +8,7 @@ import {
 import { ProductCard } from '../../containers';
 // Assets
 import comicsBanner from '../../common/assets/images/full/comics-banner-image.svg';
+import { CartTitle } from '../../components/CartTitle/CartTitle';
 
 
 export const HomePage: FC = () => {
@@ -58,7 +59,9 @@ export const HomePage: FC = () => {
           
         </S.ProductsWrapper>
       </S.MainWrapper>
-      <S.CartWrapper> teste </S.CartWrapper>
+      <S.CartWrapper> 
+        <CartTitle/>  
+      </S.CartWrapper>
     </S.Container>
   )
 }

@@ -62,7 +62,7 @@ export const font = {
     heading01: '5rem',
   },
   family: {
-    Roboto: "Poppins, 'roboto', arial, sans-serif",
+    Roboto: "'Poppins', roboto arial, sans-serif",
   },
 } as const
 

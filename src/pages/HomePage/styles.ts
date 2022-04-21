@@ -43,6 +43,7 @@ export const CartWrapper = styled.div`
   width: 25%;
   background-color: transparent;
   border: 1px solid gray;
+  padding: 22px;
 
   @media (max-width: ${breakpoints.medium}) {
     display: none;
