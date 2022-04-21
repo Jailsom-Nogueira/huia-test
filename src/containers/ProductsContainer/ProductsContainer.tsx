@@ -2,21 +2,22 @@
 import { FC } from 'react'
 // Self
 import { ProductCard } from '../ProductCard';
-import { ProductsWrapper } from './styles';
+import * as S from './styles';
 // Mocks
-import { products } from '../../common/mocks/products';
+import { products } from '../../common/mocks';
 
-export const ProductsContainer: FC = () => (
-  <ProductsWrapper>
-    {products.map(product => {
-      return(
-        <ProductCard 
-          key={product.productId}
-          productTitle= {product.productTitle}
-          productDescription= {product.productDescription}
-          productPrice= {product.productPrice}
-        />
-      )
-    })}
-  </ProductsWrapper>
-);
+export const ProductsContainer: FC = () => {
+  return (
+    <S.ProductsWrapper>
+      {products.map(product => {
+        return(
+          <S.Container key={product.productId}>
+            <ProductCard 
+              product= {product}
+            />
+          </S.Container>
+        )
+      })}
+    </S.ProductsWrapper>
+  )
+};

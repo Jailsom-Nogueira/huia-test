@@ -1,13 +1,21 @@
 // Libs
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 // Self
 import { ProductCard } from './ProductCard';
+// Mocks
+import { product } from '../../common/mocks';
+
 
 describe('ProductCard element', () => {
   test('ProductCard element renders', () => {
-    render(<ProductCard   
-      productTitle= {'string'}
-      productDescription= {'string'}
-      productPrice= {240} />);
+    render(<ProductCard product={product} />);
   });
+
+  test('Button click', () => {
+    render(<ProductCard product={product} />);
+  
+    userEvent.click(screen.getByTestId('button-component-1'))
+    expect(screen.getByTestId('button-component-1')).toBeInTheDocument
+  })
 });

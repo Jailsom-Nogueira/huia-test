@@ -1,5 +1,5 @@
 // Libs
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { Button, RatingStars } from '../../components';
 // Self
 import * as S from './styles';
@@ -7,35 +7,45 @@ import * as S from './styles';
 import robotImage from '../../common/assets/images/full/robot-image.svg';
 
 interface ProductCardProps {
-  productTitle: string;
   productDescription: string;
+  productTitle: string;
   productPrice: number;
+  productId: string;
 };
 
-export const ProductCard: FC<ProductCardProps> = ({
-  productTitle,
-  productDescription,
-  productPrice
-}) => (
-  <S.Container >
-    <img src={robotImage} alt={`Product ${productTitle}`}/>
-    <S.ProductDetails>
-      <h1>{productTitle}</h1>
-      <p>{productDescription}</p>
-    </S.ProductDetails>
-    <S.ProductFooter>
-      <RatingStars />
-      <p>
-        {`${productPrice.toLocaleString('pt-br', {
-          style: 'currency',
-          currency: 'BRL',
-          minimumFractionDigits: 2,
-        })}`}
-      </p>
-    </S.ProductFooter>
-    <Button 
-      buttonText='ADICIONAR AO CARRINHO'
-      buttonColor='green'
-    />
-  </S.Container>
-);
+interface ProductProps {
+  product: ProductCardProps 
+};
+
+export const ProductCard: FC<ProductProps> = ({
+  product
+}) => {
+  const [shopCart, setShopCart] = useState<any>([]);
+  // console.log(shopCart)
+  return (
+    <>
+      <img src={robotImage} alt={`Product ${product.productTitle}`}/>
+      <S.ProductDetails>
+        <h1>{product.productTitle}</h1>
+        <p>{product.productDescription}</p>
+      </S.ProductDetails>
+
+      <S.ProductFooter>
+        <RatingStars />
+        <p>
+          {`${product.productPrice.toLocaleString('pt-br', {
+            style: 'currency',
+            currency: 'BRL',
+            minimumFractionDigits: 2,
+          })}`}
+        </p>
+      </S.ProductFooter>
+      
+      <Button 
+        buttonText='ADICIONAR AO CARRINHO'
+        buttonColor='green'
+        onClick={() => setShopCart([...shopCart, product])}
+      />
+    </>
+  )
+};
