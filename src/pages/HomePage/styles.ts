@@ -1,13 +1,50 @@
-import styled from 'styled-components'
+// Libs
+import styled from 'styled-components';
+// Self
+import { 
+  breakpoints
+} from '../../common/styles/theme';
 
 export const Container = styled.div`
-  width: 50%;
-  height: 100vh;
-
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  width: 100%;
+  padding: 42px 32px;
+`
 
-  margin: 0 auto;
+export const MainWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 75%;
+  background-color: transparent;
+
+  @media (max-width: ${breakpoints.medium}) {
+    width: 100%;
+  }
+`
+
+export const ProductsWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  @media (max-width: ${breakpoints.large}) {
+    justify-content: space-between;
+  }
+
+  @media (max-width: ${breakpoints.medium}) {
+    justify-content: center;
+  }
+`
+
+export const CartWrapper = styled.div`
+  display: flex;
+  width: 25%;
+  background-color: transparent;
+  border: 1px solid gray;
+
+  @media (max-width: ${breakpoints.medium}) {
+    display: none;
+  }
 `

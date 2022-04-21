@@ -24,7 +24,8 @@ export const secondaryColors = {
   purple: '#6B5995',
   green: '#60A12D',
   gray: '#6B6B6B',
-  grayDark: '#2F2F2F'
+  grayDark: '#2F2F2F',
+  grayLight: '#E5E5E5' 
 } as const
 
 export const font = {

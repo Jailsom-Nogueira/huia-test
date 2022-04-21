@@ -18,7 +18,7 @@ export const ProductCard: FC<ProductCardProps> = ({
   productPrice
 }) => (
   <S.Container >
-    <img src={robotImage} alt={`Product image of ${productTitle}`}/>
+    <img src={robotImage} alt={`Product ${productTitle}`}/>
     <S.ProductDetails>
       <h1>{productTitle}</h1>
       <p>{productDescription}</p>

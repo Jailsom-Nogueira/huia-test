@@ -2,25 +2,35 @@
 import styled from 'styled-components';
 // Self
 import { 
+  breakpoints,
   font, 
   primaryColors, 
-  secondaryColors
+  secondaryColors,
+  spacings
 } from '../../common/styles/theme';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 350px;
+  max-width: 32%;
   height: auto;
+
+  @media (max-width: ${breakpoints.large}) {
+    max-width: 45%;
+  }
+
+  @media (max-width: ${breakpoints.medium}) {
+    max-width: 100%;
+  }
 `;
 
 export const ProductDetails = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: ${spacings.space01};
   width: 100%;
-  padding: 17px 20px 0 20px;
+  padding: 1.2rem 1.6rem 0 1.6rem;
 
   h1{
     font-size: ${font.sizes.normal};
@@ -39,12 +49,18 @@ export const ProductFooter = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 25px;
-  padding: 5px 20px;
-  margin: 5px 0;
+  padding: 0.6rem 1.6rem;
+  margin: 0.4rem 0;
   
   p{
     font-size: ${font.sizes.normal};
     font-weight: ${font.bold};
     color: ${secondaryColors.grayDark};
+  }
+
+  @media (max-width: ${breakpoints.large}) {
+    p{
+      font-size: ${font.sizes.small};
+    }
   }
 `;

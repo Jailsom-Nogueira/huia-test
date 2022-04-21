@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-import { font } from './theme'
+import { font, secondaryColors } from './theme'
 
 export default createGlobalStyle`
    * {
@@ -11,6 +11,7 @@ export default createGlobalStyle`
 
   html {
     font-size: 62.5%; // 16px = 1.6rem
+    background-color: ${secondaryColors.grayLight};
   }
 
   body {
