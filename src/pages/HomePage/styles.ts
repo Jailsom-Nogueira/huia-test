@@ -23,21 +23,6 @@ export const MainWrapper = styled.div`
   }
 `
 
-export const ProductsWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-
-  @media (max-width: ${breakpoints.large}) {
-    justify-content: space-between;
-  }
-
-  @media (max-width: ${breakpoints.medium}) {
-    justify-content: center;
-  }
-`
-
 export const CartWrapper = styled.div`
   display: flex;
   width: 25%;

@@ -3,13 +3,12 @@ import { FC } from 'react'
 // Self
 import * as S from './styles'
 import { 
-  Banner
+  Banner,
+  CartTitle
 } from '../../components'
-import { ProductCard } from '../../containers';
+import { ProductsContainer } from '../../containers';
 // Assets
 import comicsBanner from '../../common/assets/images/full/comics-banner-image.svg';
-import { CartTitle } from '../../components/CartTitle/CartTitle';
-
 
 export const HomePage: FC = () => {
   return (
@@ -19,45 +18,7 @@ export const HomePage: FC = () => {
           imageSrc={comicsBanner}
           bannerText='Huia - Teste Desenvolvimento Front-End'
         />
-
-        <S.ProductsWrapper>
-          <ProductCard 
-            productTitle= 'titulo'
-            productDescription= 'descr'
-            productPrice= {204}
-          />
-
-          <ProductCard 
-            productTitle= 'titulo'
-            productDescription= 'descr'
-            productPrice= {204}
-          />
-
-          <ProductCard 
-            productTitle= 'titulo'
-            productDescription= 'descr'
-            productPrice= {204}
-          />
-
-          <ProductCard 
-            productTitle= 'titulo'
-            productDescription= 'descr'
-            productPrice= {204}
-          />
-
-          <ProductCard 
-            productTitle= 'titulo'
-            productDescription= 'descr'
-            productPrice= {204}
-          />
-
-          <ProductCard 
-            productTitle= 'titulo'
-            productDescription= 'descr'
-            productPrice= {204}
-          />
-          
-        </S.ProductsWrapper>
+        <ProductsContainer/>          
       </S.MainWrapper>
       <S.CartWrapper> 
         <CartTitle/>  
