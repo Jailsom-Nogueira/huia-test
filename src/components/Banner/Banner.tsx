@@ -1,5 +1,3 @@
-// Libs
-import { FC } from 'react';
 // Self
 import { Container } from './styles';
 
@@ -8,10 +6,10 @@ interface BannerProps {
   bannerText?: string;
 }
 
-export const Banner: FC<BannerProps> = ({
+export function Banner({
   bannerText, 
   imageSrc
-}) => {
+}: BannerProps): JSX.Element {
   return (
     <Container imageSrc={imageSrc}>
       <p>{bannerText}</p>

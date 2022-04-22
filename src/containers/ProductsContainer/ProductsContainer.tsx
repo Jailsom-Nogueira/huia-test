@@ -1,12 +1,10 @@
-// Libs
-import { FC } from 'react'
 // Self
 import { ProductCard } from '../ProductCard';
 import * as S from './styles';
 // Mocks
 import { products } from '../../common/mocks';
 
-export const ProductsContainer: FC = () => {
+export function ProductsContainer(): JSX.Element {
   return (
     <S.ProductsWrapper>
       {products.map(product => {

@@ -1,5 +1,4 @@
 // Libs
-import { FC } from 'react'
 import { Button, RatingStars } from '../../components';
 // Self
 import * as S from './styles';
@@ -8,12 +7,11 @@ import { CartHook } from '../../hooks/CartHook/CartHook'
 // Assets
 import robotImage from '../../common/assets/images/full/robot-image.svg';
 
-export const ProductCard: FC<ProductProps> = ({
-  product
-}) => {
+export function ProductCard({ product }: ProductProps): JSX.Element {
   const {
     addProduct
   } = CartHook()
+  
   return (
     <>
       <img src={robotImage} alt={`Product ${product.productTitle}`}/>
@@ -36,9 +34,7 @@ export const ProductCard: FC<ProductProps> = ({
       <Button 
         buttonText='ADICIONAR AO CARRINHO'
         buttonColor='green'
-        onClick={() => 
-          addProduct && 
-          addProduct(product)}
+        onClick={() => addProduct(product)}
       />
     </>
   )

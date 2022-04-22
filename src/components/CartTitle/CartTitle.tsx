@@ -1,11 +1,9 @@
-// Libs
-import { FC } from 'react';
 // Self
 import { Container } from './styles';
 // Assets
 import shoppingCartIcon from '../../common/assets/icons/shopping-cart-icon.svg'
 
-export const CartTitle: FC = () => {
+export function CartTitle(): JSX.Element {
   return (
     <Container>
       <img

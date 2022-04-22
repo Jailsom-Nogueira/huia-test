@@ -1,21 +1,17 @@
-// Libraries
-import { FC, useContext } from 'react'
 // Self
 import * as S from './styles'
-import { 
-  Banner,
-  CartTitle
-} from '../../components'
+import { Banner, CartTitle } from '../../components'
+import { CartEmpty } from '../../components/CartEmpty/CartEmpty';
 import { ProdThumbContainer, ProductsContainer } from '../../containers';
+import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext';
 // Assets
 import comicsBanner from '../../common/assets/images/full/comics-banner-image.svg';
-import { ShopCartContext } from '../../context/ShopCartContext/ShopCartContext';
 
-export const HomePage: FC = () => {
+
+export function HomePage(): JSX.Element {
   const {
-    shopCart,
-    setShopCart,
-  } = useContext(ShopCartContext)
+    shopCart
+  } = useShopCartHook()
   
   return (
     <S.Container>
@@ -30,7 +26,7 @@ export const HomePage: FC = () => {
       <S.CartWrapper> 
         <CartTitle/>
         <S.Cart>
-          <ProdThumbContainer />
+          {shopCart.length ? <ProdThumbContainer /> : <CartEmpty />}
         </S.Cart>  
       </S.CartWrapper>
     </S.Container>

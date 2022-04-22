@@ -1,14 +1,10 @@
-// Libs
-import { FC } from 'react'
 // Self
 import * as S from './styles';
 import { ProductProps } from '../../common/interfaces/IProducts';
 // Assets
 import robotThumbnail from '../../common/assets/images/thumbnails/robot-thumbnail.svg';
 
-export const ProductThumbnailCard: FC<ProductProps> = ({
-  product
-}) => {
+export function ProductThumbnailCard({ product }: ProductProps): JSX.Element {
 
   return (
     <S.Container>

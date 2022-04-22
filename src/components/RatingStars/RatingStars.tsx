@@ -1,12 +1,12 @@
 // Libs
-import { FC, useState } from 'react';
+import { useState } from 'react';
 // Self
 import * as S from './styles';
 // Assets
 import starEmpty from '../../common/assets/icons/star-empty-icon.svg'
 import starfilled from '../../common/assets/icons/star-filled-icon.svg'
 
-export const RatingStars: FC = () => {
+export function RatingStars(): JSX.Element {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
   return (

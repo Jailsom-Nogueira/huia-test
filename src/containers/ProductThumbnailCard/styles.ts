@@ -2,7 +2,6 @@
 import styled from 'styled-components';
 // Self
 import { 
-  breakpoints,
   font, 
   primaryColors, 
   secondaryColors,
@@ -36,6 +35,7 @@ export const ProductDetails = styled.div`
     font-size: ${font.sizes.normal};
     font-weight: ${font.xbold};
   }
+  
   p{
     margin-top: ${spacings.space02};
     

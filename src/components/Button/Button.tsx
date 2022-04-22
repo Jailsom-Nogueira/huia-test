@@ -1,5 +1,5 @@
 // Libs
-import { FC, ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes } from 'react';
 // Self
 import { ButtonContainer } from './styles';
 
@@ -11,18 +11,20 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   onClick: () => void;
 };
 
-export const Button: FC<ButtonProps> = ({
-  children,
-  buttonText,
-  buttonColor,
-  onClick
-}) => (
-  <ButtonContainer 
-    onClick={onClick}
-    buttonColor={buttonColor}
-    data-testid='button-component-1'
-  >
-    <p>{buttonText}</p>
-    {children}
-  </ButtonContainer>
-);
+export function Button({
+    children,
+    buttonText,
+    buttonColor,
+    onClick
+  }: ButtonProps): JSX.Element {
+    return (
+      <ButtonContainer
+        onClick={onClick}
+        buttonColor={buttonColor}
+        data-testid='button-component-1'
+      >
+        <p>{buttonText}</p>
+        {children}
+      </ButtonContainer>
+    );
+  };
