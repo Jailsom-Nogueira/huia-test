@@ -1,16 +1,22 @@
 // Libraries
-import { FC } from 'react'
+import { FC, useContext } from 'react'
 // Self
 import * as S from './styles'
 import { 
   Banner,
   CartTitle
 } from '../../components'
-import { ProductsContainer } from '../../containers';
+import { ProdThumbContainer, ProductsContainer } from '../../containers';
 // Assets
 import comicsBanner from '../../common/assets/images/full/comics-banner-image.svg';
+import { ShopCartContext } from '../../context/ShopCartContext/ShopCartContext';
 
 export const HomePage: FC = () => {
+  const {
+    shopCart,
+    setShopCart,
+  } = useContext(ShopCartContext)
+  
   return (
     <S.Container>
       <S.MainWrapper>
@@ -20,8 +26,12 @@ export const HomePage: FC = () => {
         />
         <ProductsContainer/>          
       </S.MainWrapper>
+      
       <S.CartWrapper> 
-        <CartTitle/>  
+        <CartTitle/>
+        <S.Cart>
+          <ProdThumbContainer />
+        </S.Cart>  
       </S.CartWrapper>
     </S.Container>
   )

@@ -1,0 +1,1 @@
+export { ProdThumbContainer } from './ProdThumbContainer'

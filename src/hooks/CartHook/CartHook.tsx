@@ -1,19 +1,17 @@
 // Libs
-import { useCallback, useContext } from 'react';
+import { useCallback } from 'react';
 // Self
 import { ProductCardProps } from '../../common/interfaces/IProducts';
-import { ShopCartContext } from '../../context/ShopCartContext/ShopCartContext'
+import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext'
 
 export const CartHook = () => {
   const {
     shopCart,
     setShopCart
-  } = useContext(ShopCartContext)
+  } = useShopCartHook()
 
   const addProduct = useCallback ((product: ProductCardProps) => {
-    shopCart && shopCart.push(product)
-    setShopCart && setShopCart(shopCart)
-    console.log(shopCart)
+    setShopCart([...shopCart, product])
   },[shopCart, setShopCart])
 
   return {
