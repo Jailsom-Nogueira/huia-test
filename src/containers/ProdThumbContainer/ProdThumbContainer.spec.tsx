@@ -24,6 +24,7 @@ describe('ProdThumbContainer element', () => {
   test('ProdThumbContainer element renders', () => {
     jest.spyOn(CartHook, 'CartHook').mockImplementation(() => ({
       addProduct: jest.fn(),
+      removeProduct: jest.fn(),
     }))
 
     render(<ProdThumbContainer />);

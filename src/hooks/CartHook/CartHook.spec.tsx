@@ -12,7 +12,7 @@ describe('ProductCard element', () => {
   beforeEach(() => {
     mockedShopCartContext.mockReturnValue({
       shopCart: products,
-      shopCartTotal: 10,
+      shopCartTotal: 0,
       setShopCart: jest.fn(),
       setShopCartTotal: jest.fn(),
     })
@@ -20,6 +20,7 @@ describe('ProductCard element', () => {
   test('ProductCard element renders', () => {
     jest.spyOn(CartHook, 'CartHook').mockImplementation(() => ({
       addProduct: jest.fn(),
+      removeProduct: jest.fn(),
     }))
   });
 });

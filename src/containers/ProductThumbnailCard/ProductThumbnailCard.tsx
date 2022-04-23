@@ -1,9 +1,11 @@
 // Self
 import * as S from './styles';
 import { ProductProps } from '../../common/interfaces/IProducts';
+import { CartHook } from '../../hooks/CartHook/CartHook';
 
 export function ProductThumbnailCard({ product }: ProductProps): JSX.Element {
-
+  const { removeProduct, addProduct } = CartHook()
+  
   return (
     <S.Container>
       <S.ImageWrapper>
@@ -16,7 +18,9 @@ export function ProductThumbnailCard({ product }: ProductProps): JSX.Element {
           <p>{product.productDescription}</p>
         </S.TextWrapper>
         <S.ButtonWrapper>
-          <button>- 03 +</button>
+          <button onClick={() => removeProduct(product)}>- </button>
+          <p>{product.productQuantity}</p>
+          <button onClick={() => addProduct(product)}> +</button>
         </S.ButtonWrapper>
       </S.ProductDetails>
     </S.Container>

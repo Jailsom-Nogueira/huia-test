@@ -6,9 +6,7 @@ import { ProductProps } from '../../common/interfaces/IProducts';
 import { CartHook } from '../../hooks/CartHook/CartHook'
 
 export function ProductCard({ product }: ProductProps): JSX.Element {
-  const {
-    addProduct
-  } = CartHook()
+  const { addProduct } = CartHook()
   
   return (
     <>

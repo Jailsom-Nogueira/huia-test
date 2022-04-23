@@ -3,6 +3,7 @@ export const product = {
   productTitle: 'Nome do produto',
   productDescription: 'Uma breve descrição sobre o produto, como tamanho, cores...',
   productPrice: 204,
+  productQuantity: 10,
   productImage: '../../common/assets/images/full/robot-image.svg',
   productThumbnail: '../../assets/images/thumbnails/robot-thumbnail.svg'
 }

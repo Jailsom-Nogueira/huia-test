@@ -19,6 +19,7 @@ export const products = [
     productTitle: 'Robot posing',
     productDescription: 'Mussum Ipsum, cacilds vidis litro abertis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Casamentiss faiz malandris se pirulitá.Mé faiz elementum girarzis, nisi eros vermeio.Sapien in monti palavris qui num significa nadis i pareci latim.',
     productPrice: 204,
+    productQuantity: 0,
     productImage: `${robotImage}`,
     productThumbnail: `${robotThumbnail}`
   },
@@ -27,6 +28,7 @@ export const products = [
     productTitle: 'Kirk wearing a intact t-shirt, that`s new',
     productDescription: 'Mussum Ipsum, cacilds vidis litro abertis.',
     productPrice: 366,
+    productQuantity: 0,
     productImage: `${kirkImage}`,
     productThumbnail: `${kirkThumbnail}`
   },
@@ -35,6 +37,7 @@ export const products = [
     productTitle: 'Distracted Storm Trooper',
     productDescription: 'Mussum Ipsum, cacilds vidis litro abertis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Casamentiss faiz malandris se pirulitá.Mé faiz elementum girarzis, nisi eros vermeio.',
     productPrice: 23,
+    productQuantity: 0,
     productImage: `${stormTrooperImage}`,
     productThumbnail: `${stormTrooperThumbnail}`
   },
@@ -43,6 +46,7 @@ export const products = [
     productTitle: 'Bruce Lee being Bruce Lee',
     productDescription: 'Mussum Ipsum, cacilds vidis litro abertis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Casamentiss faiz malandris se pirulitá.Mé faiz elementum girarzis, nisi eros vermeio.Sapien in monti palavris.',
     productPrice: 2,
+    productQuantity: 0,
     productImage: `${bruceLeeImage}`,
     productThumbnail: `${bruceLeeThumbnail}`
   },
@@ -51,6 +55,7 @@ export const products = [
     productTitle: 'Infinity and Beyond',
     productDescription: 'Mussum Ipsum, cacilds vidis litro abertis.',
     productPrice: 1204,
+    productQuantity: 0,
     productImage: `${buzzLightyearImage}`,
     productThumbnail: `${buzzLightyearThubnail}`
   },
@@ -59,6 +64,7 @@ export const products = [
     productTitle: '"I hate Tatooine"',
     productDescription: 'Mussum Ipsum, cacilds vidis litro abertis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Casamentiss faiz malandris se pirulitá.Mé faiz elementum girarzis, nisi eros vermeio.Sapien in monti palavris qui num significa nadis i pareci latim.',
     productPrice: 22304,
+    productQuantity: 0,
     productImage: `${legoTrooperImage}`,
     productThumbnail: `${legoTrooperThumbnail}`
   }

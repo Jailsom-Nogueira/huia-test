@@ -5,6 +5,7 @@ export interface ProductCardProps {
   productTitle: string;
   productPrice: number;
   productId: string;
+  productQuantity: number;
 };
 
 export interface ProductProps {

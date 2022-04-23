@@ -26,6 +26,7 @@ describe('TotalsContainer element', () => {
   test('TotalsContainer element renders', () => {
     jest.spyOn(CartHook, 'CartHook').mockImplementation(() => ({
       addProduct: jest.fn(),
+      removeProduct: jest.fn(),
     }))
 
     render(<TotalsContainer />);
