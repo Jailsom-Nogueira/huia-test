@@ -34,6 +34,12 @@ export const ProductDetails = styled.div`
   h1{
     font-size: ${font.sizes.normal};
     font-weight: ${font.xbold};
+    
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   
   p{

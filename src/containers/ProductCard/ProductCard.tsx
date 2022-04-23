@@ -4,8 +4,6 @@ import { Button, RatingStars } from '../../components';
 import * as S from './styles';
 import { ProductProps } from '../../common/interfaces/IProducts';
 import { CartHook } from '../../hooks/CartHook/CartHook'
-// Assets
-import robotImage from '../../common/assets/images/full/robot-image.svg';
 
 export function ProductCard({ product }: ProductProps): JSX.Element {
   const {
@@ -14,7 +12,7 @@ export function ProductCard({ product }: ProductProps): JSX.Element {
   
   return (
     <>
-      <img src={robotImage} alt={`Product ${product.productTitle}`}/>
+      <img src={`${product.productImage}`} alt={`Product ${product.productTitle}`} loading="lazy" />
       <S.ProductDetails>
         <h1>{product.productTitle}</h1>
         <p>{product.productDescription}</p>
