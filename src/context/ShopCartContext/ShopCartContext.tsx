@@ -13,16 +13,21 @@ interface IShopCartContext {
 
 interface IShopCartContextData {
   shopCart: ProductCardProps[];
-  setShopCart: (event: any) => void;
+  shopCartTotal: number;
+  setShopCartTotal: (event: number) => void;
+  setShopCart: (event: ProductCardProps[]) => void;
 };
 
 export function ShopCartHook({ children }: IShopCartContext): JSX.Element {
   const [shopCart, setShopCart] = useState<ProductCardProps[]>([]);
+  const [shopCartTotal, setShopCartTotal] = useState<number>(0);
 
   return (
     <ShopCartContext.Provider
       value={{
         shopCart,
+        shopCartTotal,
+        setShopCartTotal,
         setShopCart
       }}
     >

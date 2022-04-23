@@ -1,6 +1,11 @@
+// Libs
+import { render } from '@testing-library/react';
+import { 
+  useShopCartHook 
+} from '../../context/ShopCartContext/ShopCartContext';
 // Self
-import * as CartHook from './CartHook'
-import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext'
+import { TotalsContainer } from './TotalsContainer';
+import * as CartHook from '../../hooks/CartHook/CartHook'
 // Mocks
 import { products } from '../../common/mocks';
 
@@ -8,7 +13,7 @@ const mockedShopCartContext = useShopCartHook as jest.Mock
 
 jest.mock('../../context/ShopCartContext/ShopCartContext')
 
-describe('ProductCard element', () => {
+describe('TotalsContainer element', () => {
   beforeEach(() => {
     mockedShopCartContext.mockReturnValue({
       shopCart: products,
@@ -17,9 +22,12 @@ describe('ProductCard element', () => {
       setShopCartTotal: jest.fn(),
     })
   })
-  test('ProductCard element renders', () => {
+  
+  test('TotalsContainer element renders', () => {
     jest.spyOn(CartHook, 'CartHook').mockImplementation(() => ({
       addProduct: jest.fn(),
     }))
+
+    render(<TotalsContainer />);
   });
 });

@@ -23,15 +23,15 @@ export const MainWrapper = styled.div`
   }
 `
 export const Cart = styled.div`
-  background-color: ${primaryColors.white};
+  margin-top: 22px;
   padding: 22px;
+  background-color: ${primaryColors.white};
 `
 
 export const CartWrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-grow: inherit;
-  gap: 20px;
 
   width: 30vw;
   padding: 22px;

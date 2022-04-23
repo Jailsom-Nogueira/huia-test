@@ -7,13 +7,23 @@ import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext'
 export const CartHook = () => {
   const {
     shopCart,
+    shopCartTotal,
+    setShopCartTotal,
     setShopCart
   } = useShopCartHook()
 
   const addProduct = useCallback ((product: ProductCardProps) => {
-    setShopCart([...shopCart, product])
-  },[shopCart, setShopCart])
+    const total = shopCartTotal + product.productPrice
 
+    setShopCartTotal(total)
+    setShopCart([...shopCart, product])
+  },[
+    shopCart, 
+    shopCartTotal, 
+    setShopCart, 
+    setShopCartTotal
+  ])
+  
   return {
     addProduct
   }

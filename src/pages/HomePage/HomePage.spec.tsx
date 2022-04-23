@@ -16,7 +16,9 @@ describe('<HomePage />', () => {
   beforeEach(() => {
     mockedShopCartContext.mockReturnValue({
       shopCart: products,
+      shopCartTotal: 10,
       setShopCart: jest.fn(),
+      setShopCartTotal: jest.fn(),
     })
   })
 

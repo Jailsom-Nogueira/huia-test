@@ -16,16 +16,16 @@ describe('ProdThumbContainer element', () => {
   beforeEach(() => {
     mockedShopCartContext.mockReturnValue({
       shopCart: products,
+      shopCartTotal: 10,
       setShopCart: jest.fn(),
+      setShopCartTotal: jest.fn(),
     })
   })
-  test('ProductCard element renders', () => {
+  test('ProdThumbContainer element renders', () => {
     jest.spyOn(CartHook, 'CartHook').mockImplementation(() => ({
       addProduct: jest.fn(),
     }))
-  });
 
-  test('ProdThumbContainer element renders', () => {
     render(<ProdThumbContainer />);
   });
 });
