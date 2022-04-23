@@ -29,6 +29,8 @@ export const ButtonContainer = styled.button<ButtonProps>`
     secondaryColors.purple
   };
 
+  transition: 0.3s;
+
   &:hover {
     opacity: 0.9;
   }
