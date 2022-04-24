@@ -68,6 +68,9 @@ export const CartButtonWrapper = styled.button`
 `
 
 export const Cart = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   padding: 22px;
   background-color: ${primaryColors.white};
 `

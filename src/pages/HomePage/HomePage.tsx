@@ -1,21 +1,25 @@
 // Self
+import { 
+  Modal,
+  Banner,
+  CartEmpty,
+  CartTitle,
+  CloseButton
+} from '../../components';
 import {
+  TotalText,
   TotalsContainer,
   ProductsContainer,
   ProdThumbContainer,
+  ShippingContainer,
 } from '../../containers';
 import * as S from './styles';
-import { Banner, CartTitle } from '../../components';
-import { Modal } from '../../components/Modal/Modal';
-import { TotalText } from '../../containers/TotalText';
 import { WindowHook } from '../../hooks/WindowHook/WindowHook';
-import { CartEmpty } from '../../components/CartEmpty/CartEmpty';
-import { CloseButton } from '../../components/CloseButton/CloseButton';
 import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext';
-
 // Assets
 import comicsBanner from '../../common/assets/images/full/comics-banner-image.svg';
 import xIcon from '../../common/assets/icons/x-icon.svg';
+
 
 export function HomePage(): JSX.Element {
   const { shopCart, cartModal, setCartModal } = useShopCartHook()
@@ -29,7 +33,16 @@ export function HomePage(): JSX.Element {
       </S.CartTitleWrapper>
       <S.DesktopStyles>
         <S.Cart>
-          {shopCart.length ? <ProdThumbContainer /> : <CartEmpty />}
+          {shopCart.length ? 
+            (
+              <>
+                <ShippingContainer />
+                <ProdThumbContainer />
+              </>
+            )
+             : 
+            <CartEmpty />
+          }
         </S.Cart>
         <TotalsContainer />
       </S.DesktopStyles>
@@ -66,9 +79,18 @@ export function HomePage(): JSX.Element {
                 altText='close-cart-modal-button'
               />
             </S.CartTitleWrapper>
-            
+
             <S.Cart>
-              {shopCart.length ? <ProdThumbContainer /> : <CartEmpty />}
+              {shopCart.length ? 
+                (
+                  <>
+                    <ShippingContainer />
+                    <ProdThumbContainer />
+                  </>
+                )
+                : 
+                <CartEmpty />
+              }
             </S.Cart>
             
             <TotalsContainer />
