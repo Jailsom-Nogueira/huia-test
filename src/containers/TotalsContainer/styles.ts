@@ -41,3 +41,8 @@ export const SubTotalsTexts = styled.div`
     }
   }
 `
+
+export const CheckoutWrapper = styled.div`
+  width: 100%;
+  margin-top: 28px;
+`;

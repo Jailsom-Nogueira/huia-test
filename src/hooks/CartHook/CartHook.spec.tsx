@@ -19,6 +19,7 @@ describe('ProductCard element', () => {
   })
   test('ProductCard element renders', () => {
     jest.spyOn(CartHook, 'CartHook').mockImplementation(() => ({
+      checkout: jest.fn(),
       addProduct: jest.fn(),
       removeProduct: jest.fn(),
     }))

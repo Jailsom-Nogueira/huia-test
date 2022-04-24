@@ -80,7 +80,19 @@ export const CartHook = () => {
     setShopCartTotal
   ])
 
+  const checkout = useCallback (() => {
+    const total = 0
+    setShopCartTotal(total)
+
+    const cart: ProductCardProps[] = []
+    setShopCart(cart)
+  },[
+    setShopCart, 
+    setShopCartTotal
+  ])
+
   return {
+    checkout,
     addProduct,
     removeProduct
   }

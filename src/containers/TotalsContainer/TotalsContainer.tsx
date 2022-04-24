@@ -1,12 +1,13 @@
 // Self
 import * as S from './styles';
-import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext'
 import { TotalText } from '../TotalText';
+import { Button } from '../../components';
+import { CartHook } from '../../hooks/CartHook/CartHook'
+import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext'
 
 export function TotalsContainer(): JSX.Element {
-  const {
-    shopCartTotal
-  } = useShopCartHook()
+  const { shopCartTotal } = useShopCartHook()
+  const { checkout } = CartHook()
 
   const frete = 15
   return (
@@ -35,6 +36,14 @@ export function TotalsContainer(): JSX.Element {
         </S.SubTotalsTexts>
         
         <TotalText />
+
+        <S.CheckoutWrapper>
+          <Button 
+            buttonText='FINALIZAR COMPRA'
+            buttonColor='purple'
+            onClick={() => checkout()}
+          />
+        </S.CheckoutWrapper>
       </S.TotalsWrapper>
     </S.Container>
   )

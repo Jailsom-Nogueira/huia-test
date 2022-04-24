@@ -9,7 +9,7 @@ import {
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  max-height: 70vh;
   gap: 10px;
   overflow-y: scroll;
 

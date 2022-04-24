@@ -2,8 +2,8 @@
 import { Button, RatingStars } from '../../components';
 // Self
 import * as S from './styles';
-import { ProductProps } from '../../common/interfaces/IProducts';
 import { CartHook } from '../../hooks/CartHook/CartHook'
+import { ProductProps } from '../../common/interfaces/IProducts';
 
 export function ProductCard({ product }: ProductProps): JSX.Element {
   const { addProduct } = CartHook()

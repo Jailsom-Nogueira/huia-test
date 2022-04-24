@@ -70,6 +70,7 @@ export function HomePage(): JSX.Element {
             <S.Cart>
               {shopCart.length ? <ProdThumbContainer /> : <CartEmpty />}
             </S.Cart>
+            
             <TotalsContainer />
           </S.CartWrapper>
         </Modal>

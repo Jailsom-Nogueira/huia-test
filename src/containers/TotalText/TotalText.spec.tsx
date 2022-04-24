@@ -23,6 +23,7 @@ describe('TotalsText element', () => {
       setShopCartTotal: jest.fn(),
     })
     jest.spyOn(CartHook, 'CartHook').mockImplementation(() => ({
+      checkout: jest.fn(),
       addProduct: jest.fn(),
       removeProduct: jest.fn(),
     }))
@@ -40,6 +41,7 @@ describe('TotalsText element', () => {
     })
 
     jest.spyOn(CartHook, 'CartHook').mockImplementation(() => ({
+      checkout: jest.fn(),
       addProduct: jest.fn(),
       removeProduct: jest.fn(),
     }))
