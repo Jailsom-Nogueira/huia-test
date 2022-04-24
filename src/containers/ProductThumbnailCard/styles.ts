@@ -2,15 +2,17 @@
 import styled from 'styled-components';
 // Self
 import { 
-  font, 
+  font,
+  spacings,
+  breakpoints,
   primaryColors, 
-  secondaryColors,
-  spacings
+  secondaryColors
 } from '../../common/styles/theme';
 
 export const Container = styled.div`
   display: flex;
-  max-width: 100%;
+  width: 100%;
+  height: 164px;
 
   line-height: ${font.lineHeight.small};
 `;
@@ -18,6 +20,10 @@ export const Container = styled.div`
 export const ImageWrapper = styled.div`
   width: 10vw;
   height: auto;
+
+  @media (max-width: ${breakpoints.medium}) {
+    width: 30vw;
+  }
 `;
 
 export const ProductDetails = styled.div`
@@ -42,9 +48,7 @@ export const ProductDetails = styled.div`
     overflow: hidden;
   }
   
-  p{
-    margin-top: ${spacings.space02};
-    
+  p{   
     font-size: ${font.sizes.xSmall};
     font-weight: ${font.normal};
 
@@ -59,6 +63,13 @@ export const ProductDetails = styled.div`
 export const TextWrapper = styled.div`
   width: 10vw;
   flex-grow: 1;
+  P{
+    margin-top: ${spacings.space02};
+  }
+
+  @media (max-width: ${breakpoints.large}) {
+    width: 100%;
+  }
 `
 
 export const ButtonWrapper = styled.div`

@@ -28,6 +28,7 @@ export const TotalsWrapper = styled.div`
 
 export const SubTotalsTexts = styled.div`
   font-weight: ${font.xbold};
+  width: 30%;
 
   P{
     &:first-child{

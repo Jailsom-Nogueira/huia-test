@@ -3,11 +3,11 @@ import * as S from './styles';
 import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext'
 
 export function TotalText(): JSX.Element {
-  const { shopCartTotal } = useShopCartHook()
+  const { shopCartTotal, cartModal } = useShopCartHook()
 
   const frete = 15
   return (
-    <S.Container>
+    <S.Container textAlign={!cartModal ? 'end' : 'start'}>
       <p>total</p>
       <p>
         {`${(shopCartTotal + frete).toLocaleString('pt-br', {

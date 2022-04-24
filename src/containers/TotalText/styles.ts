@@ -8,7 +8,11 @@ import {
   breakpoints
 } from '../../common/styles/theme';
 
-export const Container = styled.div`
+interface TotalTextProps {
+  textAlign: 'end' | 'start';
+};
+
+export const Container = styled.div<TotalTextProps>`
   margin-top: 1.2rem;
   font-weight: ${font.xbold};
 
@@ -25,7 +29,7 @@ export const Container = styled.div`
 
   @media (max-width: ${breakpoints.medium}) {
     p{
-      text-align: end;
+      text-align: ${props => props.textAlign}
     }
   }
 `

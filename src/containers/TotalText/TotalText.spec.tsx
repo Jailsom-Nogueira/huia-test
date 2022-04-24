@@ -13,17 +13,32 @@ const mockedShopCartContext = useShopCartHook as jest.Mock
 
 jest.mock('../../context/ShopCartContext/ShopCartContext')
 
-describe('TotalsContainer element', () => {
-  beforeEach(() => {
+describe('TotalsText element', () => {
+  test('TotalsText element renders, cartModal true', () => {
     mockedShopCartContext.mockReturnValue({
-      shopCart: products,
+      cartModal: true,
       shopCartTotal: 10,
+      shopCart: products,
       setShopCart: jest.fn(),
       setShopCartTotal: jest.fn(),
     })
-  })
-  
-  test('TotalsContainer element renders', () => {
+    jest.spyOn(CartHook, 'CartHook').mockImplementation(() => ({
+      addProduct: jest.fn(),
+      removeProduct: jest.fn(),
+    }))
+
+    render(<TotalText />);
+  });
+
+  test('TotalsText element renders, cartModal false', () => {
+    mockedShopCartContext.mockReturnValue({
+      cartModal: false,
+      shopCartTotal: 10,
+      shopCart: products,
+      setShopCart: jest.fn(),
+      setShopCartTotal: jest.fn(),
+    })
+
     jest.spyOn(CartHook, 'CartHook').mockImplementation(() => ({
       addProduct: jest.fn(),
       removeProduct: jest.fn(),
