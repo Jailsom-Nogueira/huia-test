@@ -40,19 +40,3 @@ export const SubTotalsTexts = styled.div`
     }
   }
 `
-
-export const TotalsTexts = styled.div`
-  margin-top: 1.2rem;
-  font-weight: ${font.xbold};
-
-  P{
-    &:first-child{
-      font-size: ${font.sizes.normal};
-      color: ${secondaryColors.grayDarker};
-    }
-    &:last-child{
-      font-size: ${font.sizes.heading06};
-      color: ${primaryColors.dark};
-    }
-  }
-`

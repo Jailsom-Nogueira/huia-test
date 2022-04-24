@@ -1,6 +1,7 @@
 // Self
 import * as S from './styles';
 import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext'
+import { TotalText } from '../TotalText';
 
 export function TotalsContainer(): JSX.Element {
   const {
@@ -32,16 +33,8 @@ export function TotalsContainer(): JSX.Element {
             })}`}
           </p>
         </S.SubTotalsTexts>
-        <S.TotalsTexts>
-          <p>total</p>
-          <p>
-            {`${(shopCartTotal + frete).toLocaleString('pt-br', {
-              style: 'currency',
-              currency: 'BRL',
-              minimumFractionDigits: 2,
-            })}`}
-          </p>
-        </S.TotalsTexts>
+        
+        <TotalText />
       </S.TotalsWrapper>
     </S.Container>
   )

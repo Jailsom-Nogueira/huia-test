@@ -6,16 +6,16 @@ import { products } from '../../common/mocks';
 
 export function ProductsContainer(): JSX.Element {
   return (
-    <S.ProductsWrapper>
+    <S.Container>
       {products.map(product => {
         return(
-          <S.Container key={product.productId}>
+          <S.ProductsWrapper key={product.productId}>
             <ProductCard 
               product= {product}
             />
-          </S.Container>
+          </S.ProductsWrapper>
         )
       })}
-    </S.ProductsWrapper>
+    </S.Container>
   )
 };
