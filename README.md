@@ -33,5 +33,5 @@
    
  ## BFF
  
- - ### This aplication 
-    This application communicates with a Nestjs BFF for communication with Correios do Brasil.
+ - ### Requests 
+    This application uses a Nestjs BFF app for communication with Correios do Brasil.
