@@ -1,7 +1,7 @@
 // Libs
 import { useCallback } from 'react';
 import { IParams, IShipping } from '../../common/interfaces/IShipping';
-import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext';
+import { useShopCartContext } from '../../context/ShopCartContext/ShopCartContext';
 import { api } from '../../services/api';
 
 export const useShippingHook = () => {
@@ -9,7 +9,7 @@ export const useShippingHook = () => {
     shopCart,
     shipping,
     setShipping
-  } = useShopCartHook()
+  } = useShopCartContext()
 
   const fetchShipping = useCallback(async (params: IParams, headers: { "Content-Type": string; }) => {
     try {

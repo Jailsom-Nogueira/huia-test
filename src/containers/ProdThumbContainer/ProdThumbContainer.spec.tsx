@@ -2,13 +2,13 @@
 import { render } from '@testing-library/react';
 import { products } from '../../common/mocks';
 import { 
-  useShopCartHook 
+  useShopCartContext 
 } from '../../context/ShopCartContext/ShopCartContext';
 // Self
 import { ProdThumbContainer } from './ProdThumbContainer';
 import * as CartHook from '../../hooks/CartHook/useCartHook'
 
-const mockedShopCartContext = useShopCartHook as jest.Mock
+const mockedShopCartContext = useShopCartContext as jest.Mock
 
 jest.mock('../../context/ShopCartContext/ShopCartContext')
 

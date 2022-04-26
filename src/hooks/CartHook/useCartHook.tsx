@@ -2,7 +2,7 @@
 import { useCallback } from 'react';
 // Self
 import { ProductCardProps } from '../../common/interfaces/IProducts';
-import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext'
+import { useShopCartContext } from '../../context/ShopCartContext/ShopCartContext'
 
 export const useCartHook = () => {
   const {
@@ -11,7 +11,7 @@ export const useCartHook = () => {
     setShopCartTotal,
     setShipping,
     setShopCart
-  } = useShopCartHook()
+  } = useShopCartContext()
 
   const addProduct = useCallback ((product: ProductCardProps) => {
     const total = shopCartTotal + product.productPrice

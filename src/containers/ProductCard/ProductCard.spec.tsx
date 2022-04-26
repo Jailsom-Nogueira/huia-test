@@ -4,12 +4,12 @@ import userEvent from '@testing-library/user-event';
 // Self
 import { ProductCard } from './ProductCard';
 import { 
-  useShopCartHook 
+  useShopCartContext 
 } from '../../context/ShopCartContext/ShopCartContext'
 // Mocks
 import { product, products } from '../../common/mocks';
 
-const mockedShopCartContext = useShopCartHook as jest.Mock
+const mockedShopCartContext = useShopCartContext as jest.Mock
 
 jest.mock('../../context/ShopCartContext/ShopCartContext')
 

@@ -15,14 +15,14 @@ import {
 } from '../../containers';
 import * as S from './styles';
 import { useWindowHook } from '../../hooks/WindowHook/useWindowHook';
-import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext';
+import { useShopCartContext } from '../../context/ShopCartContext/ShopCartContext';
 // Assets
 import comicsBanner from '../../common/assets/images/full/comics-banner-image.svg';
 import xIcon from '../../common/assets/icons/x-icon.svg';
 
 
 export function HomePage(): JSX.Element {
-  const { shopCart, cartModal, setCartModal } = useShopCartHook()
+  const { shopCart, cartModal, setCartModal } = useShopCartContext()
   const { width } = useWindowHook()
 
   const responsiveCart = ( width > 768 ) ?

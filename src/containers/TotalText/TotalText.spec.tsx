@@ -1,7 +1,7 @@
 // Libs
 import { render } from '@testing-library/react';
 import { 
-  useShopCartHook 
+  useShopCartContext 
 } from '../../context/ShopCartContext/ShopCartContext';
 // Self
 import { TotalText } from './TotalText';
@@ -9,7 +9,7 @@ import * as CartHook from '../../hooks/CartHook/useCartHook'
 // Mocks
 import { products } from '../../common/mocks';
 
-const mockedShopCartContext = useShopCartHook as jest.Mock
+const mockedShopCartContext = useShopCartContext as jest.Mock
 
 jest.mock('../../context/ShopCartContext/ShopCartContext')
 

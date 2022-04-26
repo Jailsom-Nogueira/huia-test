@@ -1,7 +1,7 @@
 // Libs
 import { Key } from 'react';
 // Self
-import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext';
+import { useShopCartContext } from '../../context/ShopCartContext/ShopCartContext';
 import { ProductCardProps } from '../../common/interfaces/IProducts';
 import { ProductThumbnailCard } from '../ProductThumbnailCard';
 import * as S from './styles';
@@ -9,7 +9,7 @@ import * as S from './styles';
 export function ProdThumbContainer(): JSX.Element {
   const {
     shopCart
-  } = useShopCartHook()
+  } = useShopCartContext()
   
   return (
     <S.Container>

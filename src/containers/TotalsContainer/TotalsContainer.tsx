@@ -3,13 +3,13 @@ import * as S from './styles';
 import { TotalText } from '../TotalText';
 import { Button } from '../../components';
 import { useCartHook } from '../../hooks/CartHook/useCartHook'
-import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext'
+import { useShopCartContext } from '../../context/ShopCartContext/ShopCartContext'
 
 export function TotalsContainer(): JSX.Element {
   const {
     shipping,
     shopCartTotal,
-  } = useShopCartHook()
+  } = useShopCartContext()
   const { checkout } = useCartHook()
 
   return (
