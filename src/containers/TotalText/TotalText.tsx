@@ -1,9 +1,9 @@
 // Self
 import * as S from './styles';
-import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext'
+import { useShopCartContext } from '../../context/ShopCartContext/ShopCartContext'
 
 export function TotalText(): JSX.Element {
-  const { shopCartTotal, cartModal, shipping } = useShopCartHook()
+  const { shopCartTotal, cartModal, shipping } = useShopCartContext()
 
   return (
     <S.Container textAlign={!cartModal ? 'end' : 'start'}>

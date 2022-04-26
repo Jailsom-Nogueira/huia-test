@@ -5,22 +5,24 @@ import TestRenderer from 'react-test-renderer';
 import { ShippingContainer } from './ShippingContainer';
 import * as CartHook from '../../hooks/CartHook/useCartHook';
 import { 
-  useShopCartHook 
+  useShopCartContext 
 } from '../../context/ShopCartContext/ShopCartContext';
 // Mocks
 import { products } from '../../common/mocks';
 
 const { act } = TestRenderer;
-const mockedShopCartContext = useShopCartHook as jest.Mock
+const mockedShopCartContext = useShopCartContext as jest.Mock
 
 jest.mock('../../context/ShopCartContext/ShopCartContext')
 
 describe('Shipping element', () => {
   beforeEach(() => {
     mockedShopCartContext.mockReturnValue({
+      shipping: 10,
       cartModal: true,
       shopCartTotal: 10,
       shopCart: products,
+      setShipping: jest.fn(),
       setShopCart: jest.fn(),
       setShopCartTotal: jest.fn(),
     })

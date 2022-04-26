@@ -1,10 +1,10 @@
 // Self
 import * as WindowHook from './useWindowHook'
-import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext'
+import { useShopCartContext } from '../../context/ShopCartContext/ShopCartContext'
 // Mocks
 import { products } from '../../common/mocks';
 
-const mockedShopCartContext = useShopCartHook as jest.Mock
+const mockedShopCartContext = useShopCartContext as jest.Mock
 
 jest.mock('../../context/ShopCartContext/ShopCartContext')
 

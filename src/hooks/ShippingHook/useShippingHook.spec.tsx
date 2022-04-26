@@ -1,11 +1,11 @@
 // Self
 import * as ShippingHook from './useShippingHook';
 import * as CartHook from '../CartHook/useCartHook';
-import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext';
+import { ShopCartHook } from '../../context/ShopCartContext/ShopCartContext';
 // Mocks
 import { products } from '../../common/mocks';
 
-const mockedShopCartContext = useShopCartHook as jest.Mock
+const mockedShopCartContext = ShopCartHook as jest.Mock
 
 jest.mock('../../context/ShopCartContext/ShopCartContext')
 

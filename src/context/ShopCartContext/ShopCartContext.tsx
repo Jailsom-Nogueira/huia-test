@@ -51,7 +51,7 @@ export function ShopCartHook({ children }: IShopCartContext): JSX.Element {
   );
 };
 
-export function useShopCartHook(): IShopCartContextData {
+export function useShopCartContext(): IShopCartContextData {
   const context = useContext(ShopCartContext);
 
   return context;
