@@ -1,0 +1,8 @@
+export { TotalText } from './TotalText'
+export { TotalsContainer } from './TotalsContainer'
+export { ShippingContainer } from './ShippingContainer'
+export { ProductCard } from './ProductCard/ProductCard'
+export { ProductsContainer } from './ProductsContainer'
+export { HandleCartQuantity } from './HandleCartQuantity'
+export { ProdThumbContainer } from './ProdThumbContainer'
+export { ProductThumbnailCard } from './ProductThumbnailCard'
