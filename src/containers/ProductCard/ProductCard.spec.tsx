@@ -6,7 +6,6 @@ import { ProductCard } from './ProductCard';
 import { 
   useShopCartHook 
 } from '../../context/ShopCartContext/ShopCartContext'
-import * as CartHook from '../../hooks/CartHook/CartHook'
 // Mocks
 import { product, products } from '../../common/mocks';
 

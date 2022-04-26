@@ -1,11 +1,9 @@
 // Libs
 import { fireEvent, render, waitFor } from '@testing-library/react';
-import MockAdapter from 'axios-mock-adapter';
 import TestRenderer from 'react-test-renderer';
 // Self
-import * as ShippingHook from '../../hooks/ShippingHook/ShippingHook';
 import { ShippingContainer } from './ShippingContainer';
-import * as CartHook from '../../hooks/CartHook/CartHook';
+import * as CartHook from '../../hooks/CartHook/useCartHook';
 import { 
   useShopCartHook 
 } from '../../context/ShopCartContext/ShopCartContext';
@@ -17,7 +15,7 @@ const mockedShopCartContext = useShopCartHook as jest.Mock
 
 jest.mock('../../context/ShopCartContext/ShopCartContext')
 
-describe('TotalsText element', () => {
+describe('Shipping element', () => {
   beforeEach(() => {
     mockedShopCartContext.mockReturnValue({
       cartModal: true,
@@ -26,14 +24,14 @@ describe('TotalsText element', () => {
       setShopCart: jest.fn(),
       setShopCartTotal: jest.fn(),
     })
-    jest.spyOn(CartHook, 'CartHook').mockImplementation(() => ({
+    jest.spyOn(CartHook, 'useCartHook').mockImplementation(() => ({
       checkout: jest.fn(),
       addProduct: jest.fn(),
       removeProduct: jest.fn(),
     }))
   })
 
-  test('TotalsText input change', async () => {
+  test('Shipping input change', async () => {
     const { getByTestId } = render(<ShippingContainer />);
 
     const cepInput = getByTestId('input-component-1');
@@ -54,7 +52,7 @@ describe('TotalsText element', () => {
     });
   });
 
-  test('TotalsText input ENTER', async () => {
+  test('Shipping input ENTER', async () => {
     const { getByTestId } = render(<ShippingContainer />);
 
     const cepInput = getByTestId('input-component-1');

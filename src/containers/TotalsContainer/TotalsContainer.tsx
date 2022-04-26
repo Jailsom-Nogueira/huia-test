@@ -2,7 +2,7 @@
 import * as S from './styles';
 import { TotalText } from '../TotalText';
 import { Button } from '../../components';
-import { CartHook } from '../../hooks/CartHook/CartHook'
+import { useCartHook } from '../../hooks/CartHook/useCartHook'
 import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext'
 
 export function TotalsContainer(): JSX.Element {
@@ -10,7 +10,7 @@ export function TotalsContainer(): JSX.Element {
     shipping,
     shopCartTotal,
   } = useShopCartHook()
-  const { checkout } = CartHook()
+  const { checkout } = useCartHook()
 
   return (
     <S.Container>

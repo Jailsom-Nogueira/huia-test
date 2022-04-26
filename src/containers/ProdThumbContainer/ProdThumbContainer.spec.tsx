@@ -6,7 +6,7 @@ import {
 } from '../../context/ShopCartContext/ShopCartContext';
 // Self
 import { ProdThumbContainer } from './ProdThumbContainer';
-import * as CartHook from '../../hooks/CartHook/CartHook'
+import * as CartHook from '../../hooks/CartHook/useCartHook'
 
 const mockedShopCartContext = useShopCartHook as jest.Mock
 
@@ -22,7 +22,7 @@ describe('ProdThumbContainer element', () => {
     })
   })
   test('ProdThumbContainer element renders', () => {
-    jest.spyOn(CartHook, 'CartHook').mockImplementation(() => ({
+    jest.spyOn(CartHook, 'useCartHook').mockImplementation(() => ({
       checkout: jest.fn(),
       addProduct: jest.fn(),
       removeProduct: jest.fn(),

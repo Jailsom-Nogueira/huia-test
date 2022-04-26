@@ -1,7 +1,7 @@
 // Libs
 import { useLayoutEffect, useState } from 'react';
 
-export const WindowHook = () => {
+export const useWindowHook = () => {
   const [width] = useWindowSize();
 
   function useWindowSize() {

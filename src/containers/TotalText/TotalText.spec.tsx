@@ -5,7 +5,7 @@ import {
 } from '../../context/ShopCartContext/ShopCartContext';
 // Self
 import { TotalText } from './TotalText';
-import * as CartHook from '../../hooks/CartHook/CartHook'
+import * as CartHook from '../../hooks/CartHook/useCartHook'
 // Mocks
 import { products } from '../../common/mocks';
 
@@ -22,7 +22,7 @@ describe('TotalsText element', () => {
       setShopCart: jest.fn(),
       setShopCartTotal: jest.fn(),
     })
-    jest.spyOn(CartHook, 'CartHook').mockImplementation(() => ({
+    jest.spyOn(CartHook, 'useCartHook').mockImplementation(() => ({
       checkout: jest.fn(),
       addProduct: jest.fn(),
       removeProduct: jest.fn(),
@@ -39,13 +39,6 @@ describe('TotalsText element', () => {
       setShopCart: jest.fn(),
       setShopCartTotal: jest.fn(),
     })
-
-    jest.spyOn(CartHook, 'CartHook').mockImplementation(() => ({
-      checkout: jest.fn(),
-      addProduct: jest.fn(),
-      removeProduct: jest.fn(),
-    }))
-
     render(<TotalText />);
   });
 });

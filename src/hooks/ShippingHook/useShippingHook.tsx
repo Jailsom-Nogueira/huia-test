@@ -4,12 +4,29 @@ import { IParams, IShipping } from '../../common/interfaces/IShipping';
 import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext';
 import { api } from '../../services/api';
 
-export const ShippingHook = () => {
+export const useShippingHook = () => {
   const {
     shopCart,
     shipping,
     setShipping
   } = useShopCartHook()
+
+  const fetchShipping = useCallback(async (params: IParams, headers: { "Content-Type": string; }) => {
+    try {
+      const response = await api.get('/shipping/price', {
+        params,
+        headers
+      });
+
+      const shippingAmount = parseFloat(response.data)
+
+      if(shipping !== shippingAmount){
+        setShipping(parseFloat(response.data))
+      }
+    } catch (err) {
+      console.error(err)
+    }
+  }, [shipping, setShipping]);
 
   const getShippingAmount = useCallback(async (cep: string) => {
     const totals = shopCart.reduce((prev, next): IShipping => { 
@@ -30,7 +47,7 @@ export const ShippingHook = () => {
       productDeclaredValue: 0
     })
 
-    const params: IParams = {
+    const params = {
       'nCdEmpresa': '',
       'sDsSenha': '',
       'nCdServico': '41106',
@@ -49,27 +66,15 @@ export const ShippingHook = () => {
 
     const headers = {"Content-Type": "application/xml; charset=utf-8"}
 
-    try {
-      const response = await api.get('/shipping/price', {
-        params,
-        headers
-      });
-
-      const shippingAmount = parseFloat(response.data)
-
-      if(shipping !== shippingAmount){
-        setShipping(parseFloat(response.data))
-      }
-    } catch (err) {
-      console.error(err)
-    }
+    await fetchShipping(params, headers)
+    
   }, [
       shopCart,
-      shipping,
-      setShipping
+      fetchShipping
     ]);
   
   return {
-    getShippingAmount
+    getShippingAmount,
+    fetchShipping
   }
 };
