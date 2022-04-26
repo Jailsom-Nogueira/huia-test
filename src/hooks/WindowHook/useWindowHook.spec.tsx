@@ -1,5 +1,5 @@
 // Self
-import * as CartHook from './CartHook'
+import * as WindowHook from './useWindowHook'
 import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext'
 // Mocks
 import { products } from '../../common/mocks';
@@ -8,7 +8,7 @@ const mockedShopCartContext = useShopCartHook as jest.Mock
 
 jest.mock('../../context/ShopCartContext/ShopCartContext')
 
-describe('CartHook Hook', () => {
+describe('WindowHook Hook', () => {
   beforeEach(() => {
     mockedShopCartContext.mockReturnValue({
       shopCart: products,
@@ -17,11 +17,9 @@ describe('CartHook Hook', () => {
       setShopCartTotal: jest.fn(),
     })
   })
-  test('CartHook Hook', () => {
-    jest.spyOn(CartHook, 'CartHook').mockImplementation(() => ({
-      checkout: jest.fn(),
-      addProduct: jest.fn(),
-      removeProduct: jest.fn(),
+  test('WindowHook Hook', () => {
+    jest.spyOn(WindowHook, 'useWindowHook').mockImplementation(() => ({
+      width: 10
     }))
   });
 });

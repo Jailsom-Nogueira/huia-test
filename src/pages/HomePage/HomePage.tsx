@@ -14,7 +14,7 @@ import {
   ShippingContainer,
 } from '../../containers';
 import * as S from './styles';
-import { WindowHook } from '../../hooks/WindowHook/WindowHook';
+import { useWindowHook } from '../../hooks/WindowHook/useWindowHook';
 import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext';
 // Assets
 import comicsBanner from '../../common/assets/images/full/comics-banner-image.svg';
@@ -23,7 +23,7 @@ import xIcon from '../../common/assets/icons/x-icon.svg';
 
 export function HomePage(): JSX.Element {
   const { shopCart, cartModal, setCartModal } = useShopCartHook()
-  const { width } = WindowHook()
+  const { width } = useWindowHook()
 
   const responsiveCart = ( width > 768 ) ?
   (

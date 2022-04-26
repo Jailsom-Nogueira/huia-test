@@ -2,11 +2,11 @@
 import { Button, RatingStars } from '../../components';
 // Self
 import * as S from './styles';
-import { CartHook } from '../../hooks/CartHook/CartHook'
+import { useCartHook } from '../../hooks/CartHook/useCartHook'
 import { ProductProps } from '../../common/interfaces/IProducts';
 
 export function ProductCard({ product }: ProductProps): JSX.Element {
-  const { addProduct } = CartHook()
+  const { addProduct } = useCartHook()
   
   return (
     <>

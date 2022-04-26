@@ -3,10 +3,10 @@ import { useState } from 'react';
 // Self
 import * as S from './styles';
 import { Input } from '../../components';
-import { ShippingHook } from '../../hooks/ShippingHook/ShippingHook';
+import { useShippingHook } from '../../hooks/ShippingHook/useShippingHook';
 
 export function ShippingContainer(): JSX.Element {
-  const { getShippingAmount } = ShippingHook()
+  const { getShippingAmount } = useShippingHook()
 
   const [ cep, setCep ] = useState('')
 

@@ -4,7 +4,7 @@ import { useCallback } from 'react';
 import { ProductCardProps } from '../../common/interfaces/IProducts';
 import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext'
 
-export const CartHook = () => {
+export const useCartHook = () => {
   const {
     shopCart,
     shopCartTotal,
