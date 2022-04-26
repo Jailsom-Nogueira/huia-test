@@ -35,3 +35,16 @@
  
  - ### Requests 
     This application uses a Nestjs BFF app for communication with Correios do Brasil.
+    
+       
+ ## What could be better
+ 
+ - ### Input 
+    Regex and Mask;
+    Error handler.
+ 
+ - ### Shippping request
+    Treatment of fields before sending to Correios do Brasil. Avoiding bug for too many products in cart.
+    
+ - ### Responsive design
+    Smoother screen transition.
