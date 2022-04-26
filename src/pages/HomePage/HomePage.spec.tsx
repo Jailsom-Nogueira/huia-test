@@ -16,9 +16,10 @@ jest.mock('../../context/ShopCartContext/ShopCartContext')
 describe('<HomePage />', () => {
   test('HomePage desktop default page render', () => {
     mockedShopCartContext.mockReturnValue({
+      shipping: 10,
       cartModal: false,
-      shopCart: products,
       shopCartTotal: 10,
+      shopCart: products,
       setShopCart: jest.fn(),
       setCartModal: jest.fn(),
       setShopCartTotal: jest.fn(),
@@ -29,9 +30,10 @@ describe('<HomePage />', () => {
 
   test('HomePage mobile page render', () => {
     mockedShopCartContext.mockReturnValue({
+      shipping: 10,
       cartModal: false,
-      shopCart: products,
       shopCartTotal: 10,
+      shopCart: products,
       setShopCart: jest.fn(),
       setCartModal: jest.fn(),
       setShopCartTotal: jest.fn(),
@@ -45,9 +47,10 @@ describe('<HomePage />', () => {
 
   test('HomePage mobile page render with modal', () => {
     mockedShopCartContext.mockReturnValue({
+      shipping: 10,
       cartModal: true,
-      shopCart: products,
       shopCartTotal: 10,
+      shopCart: products,
       setShopCart: jest.fn(),
       setCartModal: jest.fn(),
       setShopCartTotal: jest.fn(),
@@ -61,8 +64,9 @@ describe('<HomePage />', () => {
 
   test('HomePage mobile page render with CartEmpty component', () => {
     mockedShopCartContext.mockReturnValue({
-      cartModal: true,
+      shipping: 10,
       shopCart: [],
+      cartModal: true,
       shopCartTotal: 10,
       setShopCart: jest.fn(),
       setCartModal: jest.fn(),

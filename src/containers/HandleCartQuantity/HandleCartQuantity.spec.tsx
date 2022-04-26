@@ -16,8 +16,10 @@ jest.mock('../../context/ShopCartContext/ShopCartContext')
 describe('HandleCartQuantity element', () => {
   beforeEach(() => {
     mockedShopCartContext.mockReturnValue({
-      shopCart: products,
+      shipping:10,
       shopCartTotal: 10,
+      shopCart: products,
+      setShipping: jest.fn(),
       setShopCart: jest.fn(),
       setShopCartTotal: jest.fn(),
     })
@@ -63,6 +65,7 @@ describe('HandleCartQuantity element', () => {
     mockedShopCartContext.mockReturnValue({
       shopCart: [],
       shopCartTotal: 10,
+      setShipping: jest.fn(),
       setShopCart: jest.fn(),
       setShopCartTotal: jest.fn(),
     })

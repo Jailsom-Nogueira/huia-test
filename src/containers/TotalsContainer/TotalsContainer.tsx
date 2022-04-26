@@ -6,10 +6,12 @@ import { CartHook } from '../../hooks/CartHook/CartHook'
 import { useShopCartHook } from '../../context/ShopCartContext/ShopCartContext'
 
 export function TotalsContainer(): JSX.Element {
-  const { shopCartTotal } = useShopCartHook()
+  const {
+    shipping,
+    shopCartTotal,
+  } = useShopCartHook()
   const { checkout } = CartHook()
 
-  const frete = 15
   return (
     <S.Container>
       <S.TotalsWrapper>
@@ -27,7 +29,7 @@ export function TotalsContainer(): JSX.Element {
         <S.SubTotalsTexts>
           <p>frete</p>
           <p>
-            {`${frete.toLocaleString('pt-br', {
+            {`${shipping.toLocaleString('pt-br', {
               style: 'currency',
               currency: 'BRL',
               minimumFractionDigits: 2,

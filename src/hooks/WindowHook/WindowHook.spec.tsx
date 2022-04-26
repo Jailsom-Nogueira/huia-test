@@ -8,7 +8,7 @@ const mockedShopCartContext = useShopCartHook as jest.Mock
 
 jest.mock('../../context/ShopCartContext/ShopCartContext')
 
-describe('ProductCard element', () => {
+describe('WindowHook Hook', () => {
   beforeEach(() => {
     mockedShopCartContext.mockReturnValue({
       shopCart: products,
@@ -17,7 +17,7 @@ describe('ProductCard element', () => {
       setShopCartTotal: jest.fn(),
     })
   })
-  test('ProductCard element renders', () => {
+  test('WindowHook Hook', () => {
     jest.spyOn(WindowHook, 'WindowHook').mockImplementation(() => ({
       width: 10
     }))

@@ -18,19 +18,31 @@ export const products = [
     productId: '1',
     productTitle: 'Robot posing',
     productDescription: 'Mussum Ipsum, cacilds vidis litro abertis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Casamentiss faiz malandris se pirulitá.Mé faiz elementum girarzis, nisi eros vermeio.Sapien in monti palavris qui num significa nadis i pareci latim.',
-    productPrice: 204,
+    productPrice: 24,
     productQuantity: 0,
     productImage: `${robotImage}`,
-    productThumbnail: `${robotThumbnail}`
+    productThumbnail: `${robotThumbnail}`,
+    productWeight: 2,
+    productLength: 30,
+    productHeight: 10,
+    productWidth: 10,
+    productDiameter: 40,
+    productDeclaredValue: 24
   },
   {
     productId: '2',
     productTitle: 'Kirk wearing a intact t-shirt, that`s new',
     productDescription: 'Mussum Ipsum, cacilds vidis litro abertis.',
-    productPrice: 366,
+    productPrice: 36,
     productQuantity: 0,
     productImage: `${kirkImage}`,
-    productThumbnail: `${kirkThumbnail}`
+    productThumbnail: `${kirkThumbnail}`,
+    productWeight: 1,
+    productLength: 30,
+    productHeight: 10,
+    productWidth: 10,
+    productDiameter: 20,
+    productDeclaredValue: 36
   },
   {
     productId: '3',
@@ -39,16 +51,28 @@ export const products = [
     productPrice: 23,
     productQuantity: 0,
     productImage: `${stormTrooperImage}`,
-    productThumbnail: `${stormTrooperThumbnail}`
+    productThumbnail: `${stormTrooperThumbnail}`,
+    productWeight: 10,
+    productLength: 60,
+    productHeight: 10,
+    productWidth: 10,
+    productDiameter: 10,
+    productDeclaredValue: 23
   },
   {
     productId: '4',
     productTitle: 'Bruce Lee being Bruce Lee',
     productDescription: 'Mussum Ipsum, cacilds vidis litro abertis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Casamentiss faiz malandris se pirulitá.Mé faiz elementum girarzis, nisi eros vermeio.Sapien in monti palavris.',
-    productPrice: 2,
+    productPrice: 20,
     productQuantity: 0,
     productImage: `${bruceLeeImage}`,
-    productThumbnail: `${bruceLeeThumbnail}`
+    productThumbnail: `${bruceLeeThumbnail}`,
+    productWeight: 2,
+    productLength: 60,
+    productHeight: 50,
+    productWidth: 30,
+    productDiameter: 40,
+    productDeclaredValue: 20
   },
   {
     productId: '5',
@@ -57,15 +81,27 @@ export const products = [
     productPrice: 1204,
     productQuantity: 0,
     productImage: `${buzzLightyearImage}`,
-    productThumbnail: `${buzzLightyearThubnail}`
+    productThumbnail: `${buzzLightyearThubnail}`,
+    productWeight: 1,
+    productLength: 20,
+    productHeight: 10,
+    productWidth: 30,
+    productDiameter: 10,
+    productDeclaredValue: 1204
   },
   {
     productId: '6',
     productTitle: '"I hate Tatooine"',
     productDescription: 'Mussum Ipsum, cacilds vidis litro abertis. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Casamentiss faiz malandris se pirulitá.Mé faiz elementum girarzis, nisi eros vermeio.Sapien in monti palavris qui num significa nadis i pareci latim.',
-    productPrice: 22304,
+    productPrice: 23,
     productQuantity: 0,
     productImage: `${legoTrooperImage}`,
-    productThumbnail: `${legoTrooperThumbnail}`
+    productThumbnail: `${legoTrooperThumbnail}`,
+    productWeight: 2,
+    productLength: 60,
+    productHeight: 60,
+    productWidth: 30,
+    productDiameter: 50,
+    productDeclaredValue: 23
   }
 ]

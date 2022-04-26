@@ -9,6 +9,7 @@ export const CartHook = () => {
     shopCart,
     shopCartTotal,
     setShopCartTotal,
+    setShipping,
     setShopCart
   } = useShopCartHook()
 
@@ -71,12 +72,14 @@ export const CartHook = () => {
         productAlreadyExistsOnCart.productQuantity = quantity;
       } 
     }
-
+    
+    setShipping(0)
     setShopCartTotal(total)
   },[
     shopCart, 
-    shopCartTotal, 
-    setShopCart, 
+    shopCartTotal,
+    setShipping,
+    setShopCart,
     setShopCartTotal
   ])
 
@@ -86,8 +89,12 @@ export const CartHook = () => {
 
     const cart: ProductCardProps[] = []
     setShopCart(cart)
+
+    const shipping = 0
+    setShipping(shipping)
   },[
-    setShopCart, 
+    setShopCart,
+    setShipping,
     setShopCartTotal
   ])
 

@@ -16,9 +16,11 @@ jest.mock('../../context/ShopCartContext/ShopCartContext')
 describe('TotalsContainer element', () => {
   test('TotalsContainer checkout click', () => {
     mockedShopCartContext.mockReturnValue({
+      shipping: 10,
       cartModal: false,
-      shopCart: products,
       shopCartTotal: 10,
+      shopCart: products,
+      setShipping: jest.fn(),
       setShopCart: jest.fn(),
       setCartModal: jest.fn(),
       setShopCartTotal: jest.fn(),
